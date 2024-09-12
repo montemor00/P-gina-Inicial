@@ -7,11 +7,11 @@
 
 body {
     color: white;
-    background-image: url('img/OIP.jpg'); /* Defina a imagem de fundo */
-    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa ao rolar a página */
-    height: 100vh; /* Define a altura do body como a altura total da viewport */
+    background-image: url('img/OIP.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Cobre toda a tela */
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -22,7 +22,15 @@ header {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 2; /* Certifique-se de que o header esteja acima da imagem de fundo */
+    z-index: 2;
+    width: 100%;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -30,89 +38,72 @@ header {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin-left: auto;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-}
-
-.menu-icon {
-    font-size: 24px;
-    display: none; /* Só exibir em telas menores, usando media queries */
+    font-size: 16px;
 }
 
 .leader-info {
     font-weight: bold;
     font-size: 18px;
+    margin-left: auto;
+    color: white;
 }
 
 .hero {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinha o conteúdo horizontalmente ao centro */
-    justify-content: center; /* Alinha o conteúdo verticalmente ao centro */
-    text-align: center;
-    padding: 50px 20px;
+    align-items: center; /* Centraliza o conteúdo */
+    padding: 50px;
     position: relative;
     z-index: 2;
     border-radius: 10px;
     margin: 20px;
-    height: 100vh; /* Faz com que a seção ocupe toda a altura da tela */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-align: center; /* Centraliza o texto horizontalmente */
-}
-
 
 .logo-container {
     margin-bottom: 20px;
+    text-align: center; /* Centraliza o logo */
 }
 
 .logo {
     width: 150px;
 }
 
+.content {
+    text-align: center; /* Centraliza o texto */
+}
+
 h1 {
-    font-size: 48px;
+    font-size: 60px;
+    font-weight: bold;
     margin-bottom: 20px;
+    color: white;
+    border: 3px solid #fff; /* Borda ao redor do título */
+    padding: 10px;
+    display: inline-block; /* Faz com que a borda se ajuste ao texto */
 }
 
 p {
-    max-width: 600px;
+    max-width: 600px; /* Limita a largura do texto */
     font-size: 18px;
-    margin-bottom: 30px;
     line-height: 1.6;
+    color: white;
 }
 
 .leader-image {
-    margin-top: 20px;
+    margin-top: 20px; /* Espaçamento acima da imagem */
 }
 
 .leader-image img {
-    width: 200px;
-    border-radius: 50%;
-}
-
-@media (min-width: 768px) {
-    .hero {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-    }
-
-    .content {
-        max-width: 600px;
-    }
-
-}
-
-.círculo {
-    width: 5000px;
-    height: 500px;
-    margin: 100px;
+    width: 300px;
+    border-radius: 10px;
 }
